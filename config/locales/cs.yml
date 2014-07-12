@@ -1,0 +1,34 @@
+cs:
+  refinery:
+    plugins:
+      abouts:
+        title: Abouts
+    abouts:
+      admin:
+        abouts:
+          actions:
+            create_new: Přidat About
+            reorder: Řadit Abouts
+            reorder_done: Konec řazení Abouts
+          records:
+            title: Abouts
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Abouts. Zvolte "Přidat About" pro přidání prvního about.
+          about:
+            view_live_html: Zobrazit náhled about<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit about
+            delete: Smazat about
+      abouts:
+        show:
+          other: Další Abouts
+  activerecord:
+    attributes:
+      'refinery/abouts/about':
+        name: Name
+        photo: Photo
+        job_title: Job Title
+        description: Description
+        contact_email: Contact Email
+        twitter_url: Twitter Url
+        facebook_url: Facebook Url
+        linkedin_url: Linkedin Url

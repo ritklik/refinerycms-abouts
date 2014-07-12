@@ -1,0 +1,34 @@
+nl:
+  refinery:
+    plugins:
+      abouts:
+        title: Abouts
+    abouts:
+      admin:
+        abouts:
+          actions:
+            create_new: Nieuwe About toevoegen
+            reorder: De volgorde van de Abouts wijzigen
+            reorder_done: Klaar met het wijzingen van de van de About-volgorde
+          records:
+            title: Abouts
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Abouts. Druk op 'Nieuwe About toevoegen' om de eerste toe te voegen.
+          about:
+            view_live_html: Deze about op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze about
+            delete: Deze about definitief verwijderen
+      abouts:
+        show:
+          other: Andere Abouts
+  activerecord:
+    attributes:
+      'refinery/abouts/about':
+        name: Name
+        photo: Photo
+        job_title: Job Title
+        description: Description
+        contact_email: Contact Email
+        twitter_url: Twitter Url
+        facebook_url: Facebook Url
+        linkedin_url: Linkedin Url

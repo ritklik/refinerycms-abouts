@@ -1,0 +1,64 @@
+<%= form_for [refinery, :abouts_admin, @about] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @about,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :photo -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :photo_id,
+               :image => @about.photo,
+               :toggle_image_display => false -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :job_title -%>
+    <%= f.text_field :job_title -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:description],
+                :object => "abouts/about" -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :contact_email -%>
+    <%= f.text_field :contact_email -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :twitter_url -%>
+    <%= f.text_field :twitter_url -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :facebook_url -%>
+    <%= f.text_field :facebook_url -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :linkedin_url -%>
+    <%= f.text_field :linkedin_url -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.abouts.admin.abouts.about'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @about.name) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

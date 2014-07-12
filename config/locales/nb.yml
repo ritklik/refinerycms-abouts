@@ -1,0 +1,34 @@
+nb:
+  refinery:
+    plugins:
+      abouts:
+        title: Abouts
+    abouts:
+      admin:
+        abouts:
+          actions:
+            create_new: Lag en ny About
+            reorder: Endre rekkefølgen på Abouts
+            reorder_done: Ferdig å endre rekkefølgen Abouts
+          records:
+            title: Abouts
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Abouts enda. Klikk på "Lag en ny About" for å legge til din første about.
+          about:
+            view_live_html: Vis hvordan denne about ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne about
+            delete: Fjern denne about permanent
+      abouts:
+        show:
+          other: Andre Abouts
+  activerecord:
+    attributes:
+      'refinery/abouts/about':
+        name: Name
+        photo: Photo
+        job_title: Job Title
+        description: Description
+        contact_email: Contact Email
+        twitter_url: Twitter Url
+        facebook_url: Facebook Url
+        linkedin_url: Linkedin Url
